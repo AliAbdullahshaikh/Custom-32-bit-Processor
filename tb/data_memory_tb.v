@@ -18,7 +18,7 @@ module data_memory_tb;
     // Instantiate DUT
     data_memory #(
         .DATA_WIDTH(32),
-      .ADDR_WIDTH(9),
+        .ADDR_WIDTH(9),
         .INIT_FILE("") // Empty for this test so we start from scratch
     ) uut (
         .clk(clk),
@@ -41,15 +41,15 @@ module data_memory_tb;
 
     // Test Sequence
     initial begin
-        $monitor("Time=%0t | WE=%b | RE=%b | Addr=%d | WData=%h | RData=%h", 
-                 $time, mem_write, mem_read, addr, write_data, read_data);
+        $monitor("Time=%0t | WE=%b | RE=%b | Addr=%d | WData=%h | RData=%h", $time, mem_write, mem_read, addr, write_data, read_data);
 
         // 1. Initialize
         mem_write = 0; mem_read = 0; addr = 0; write_data = 0;
         #20;
 
         // 2. Write 0xCAFE1234 to Address 10
-        mem_write = 1; mem_read = 0;
+        mem_write = 1; 
+        mem_read = 0;
         addr = 9'd10; 
         write_data = 32'hCAFE1234;
         #20;
