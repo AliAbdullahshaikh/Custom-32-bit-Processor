@@ -59,7 +59,7 @@ A custom 7-instruction assembly program was loaded into the Program Memory. The 
 ![CPU Waveform](docs/results/waveform_processor_top.png)
 
 **Console Output (Instruction Execution Log):**
-![CPU Console](docs/results/console_processor_top.png)
+![CPU Console](docs/results/console_processor_top_output.png)
 
 ## 🛠️ How to Run
 1. Clone the repository to your local machine.
