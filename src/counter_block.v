@@ -11,13 +11,13 @@ module counter_block(
 	input  rst, 
 	output reg [3:0] counter
 );
-       // 4-bit Program Counter (PC) for sequential instruction fetching
-       always @(posedge clk) begin
-	 if (rst) begin
-	    counter <= 4'b0000; // Reset to first instruction
-	 end 
-	 else begin
-	    counter <= counter + 1'b1; // Increment to next instruction
-	 end
-       end
+    // 4-bit Program Counter (PC) for sequential instruction fetching
+	always @(posedge clk) begin
+		if (rst) begin
+	    	counter <= 4'b0000; // Reset to first instruction
+	 	end 
+	 	else begin
+	    	counter <= counter + 1'b1; // Increment to next instruction
+	 	end
+	end
 endmodule
