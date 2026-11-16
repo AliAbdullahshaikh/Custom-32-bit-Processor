@@ -26,8 +26,7 @@ module processor_top_tb;
 
     initial begin
         // Monitor the Program Counter and ALU output
-        $monitor("Time=%0t | PC=%d | Opcode=%b | ALU_Res=%h", 
-                 $time, uut.pc_out, uut.opcode, uut.alu_result);
+        $monitor("Time=%0t | PC=%d | Opcode=%b | ALU_Res=%h", $time, uut.pc_out, uut.opcode, uut.alu_result);
 
         rst = 1;
         #40; 
