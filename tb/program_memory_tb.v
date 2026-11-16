@@ -41,8 +41,7 @@ module program_memory_tb;
     // Test Sequence
     integer i; // Integer for the loop
     initial begin
-        $monitor("Time=%0t | Address=%d | Write_Enable=%b | Data_Out=%b", 
-                 $time, write_address, write_enable, data_out);
+        $monitor("Time=%0t | Address=%d | Write_Enable=%b | Data_Out=%b", $time, write_address, write_enable, data_out);
 
         // 1. Initialize: Enable memory, disable writing (Read-Only)
         ram_enable = 1;
@@ -58,5 +57,4 @@ module program_memory_tb;
         // End Simulation
         $finish;
     end
-      
 endmodule
