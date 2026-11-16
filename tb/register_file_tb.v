@@ -46,8 +46,7 @@ module register_file_tb;
 
     // Test Sequence
     initial begin
-      $monitor("Time=%0t | WE=%b | WriteAddr=%d | WriteData=%h | ReadAddr1=%d | ReadData1=%h | ReadAddr2=%d | ReadData2=%h", 
-                 $time, write_enable, write_address, write_data, read_address1, read_data1, read_address2, read_data2);
+      $monitor("Time=%0t | WE=%b | WriteAddr=%d | WriteData=%h | ReadAddr1=%d | ReadData1=%h | ReadAddr2=%d | ReadData2=%h", $time, write_enable, write_address, write_data, read_address1, read_data1, read_address2, read_data2);
 
         // Initialize
         write_enable = 0; write_address = 0; write_data = 0;
@@ -57,7 +56,7 @@ module register_file_tb;
         // 1. Read Initial Data from regfile.txt (Address 0)
         read_address1 = 5'd0;
         #20;
-      // 2. Write New Data to Address 0 (0xABCD0123)
+        // 2. Write New Data to Address 0 (0xABCD0123)
         write_enable = 1;
         write_address = 5'd0;
       	write_data = 32'hABCD0123;
