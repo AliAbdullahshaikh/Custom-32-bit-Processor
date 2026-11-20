@@ -61,13 +61,13 @@ A custom 7-instruction assembly program was loaded into the Program Memory. The 
 **Console Output (Instruction Execution Log):**
 ![CPU Console](docs/results/console_processor_top_output.png)
 
-## 🛠️ How to Run
+## How to Run
 1. Clone the repository to your local machine.
 2. Open the project in Xilinx ISE/Vivado, ModelSim, or EDA Playground.
 3. Add all `.v` files from the `src/` folder to your design sources, and the testbenches from `tb/` to your simulation sources.
 4. **Important:** Ensure the text files (`data_in_address.txt` and `regfile.txt` from the `test_programs/` folder) are placed in the root directory of your simulator, as the `$readmem` commands require them to initialize the memory.
 
-## 🧑‍💻 Author
+## Author
 **Ali Abdullah**  
 *Bachelor of Electrical Engineering (Electronics)*  
 [LinkedIn](https://linkedin.com/in/aliabdullahshk) | [GitHub](https://github.com/AliAbdullahshaikh)
